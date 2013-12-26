@@ -5,7 +5,7 @@
       <div class="panel-body">
         <%= pin.description %><br>
         <strong><%= pin.user.email if pin.user %></strong>
-        <% if pin.user == current_user %>
+        <% if pin.user == pin.user %>
           <div class="actions">
             <td><%= link_to 'Edit', edit_pin_path(pin) %>
             <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
