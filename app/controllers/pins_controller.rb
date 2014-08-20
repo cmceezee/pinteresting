@@ -5,10 +5,13 @@ class PinsController < ApplicationController
 
 
   def index
-    @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 8)
+    @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 20)
   end
 
   def show
+    @pin = Pin.find(params[:id])
+    @comments = @pin.comments.all
+    @comment = @pin.comments.build
   end
 
   def new
