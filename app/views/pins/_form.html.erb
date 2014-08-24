@@ -23,6 +23,14 @@
     <%= f.text_field :description, class: "form-control" %>
   </div>
 
+  <div class="form-group">
+    Make this pin private?
+    <span>
+      <%= f.radio_button :private, true %> Yes
+    </span>
+    <%= f.radio_button :private, false %> No
+  </div>
+
   <div class="actions">
     <%= f.submit class: "btn btn-primary" %>
   </div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140820031016) do
+ActiveRecord::Schema.define(version: 20140824003951) do
 
   create_table "comments", force: true do |t|
     t.string   "user_name"
@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 20140820031016) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.boolean  "private",            default: false
+    t.string   "preference"
   end
 
   add_index "pins", ["user_id"], name: "index_pins_on_user_id"
