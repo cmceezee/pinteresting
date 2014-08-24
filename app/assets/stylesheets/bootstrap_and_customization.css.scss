@@ -1,11 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Cuprum:400,700);
 
 $body-bg:		 				#ecf0f1;
-$font-family-sans-sarif:		'Cuprum', sans-serif;
-$navbar-default-bg: 			#c0392b;
-$navbar-default-link-color:	 	#ecf0f1;
-$brand-primary:					#c0392b;
-$jumbotron-bg:					white;
+$font-family-sans-serif:		'Cuprum', 'Helvetica Neue', Helvetica, Arial, font-family-sans-serif;
+$navbar-inverse-bg: 			#27ae60;
+$navbar-inverse-link-color: 	white;
+$jumbotron-bg: 					#ecf0f1;
 
 @import 'bootstrap';
 
@@ -13,6 +12,6 @@ $jumbotron-bg:					white;
 	text-align: center;
 }
 
-.navbar-brand{
+.navbar-brand {
 	font-weight: bold;
 }

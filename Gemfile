@@ -18,9 +18,15 @@ gem 'masonry-rails', '~> 0.2.0'
 gem 'will_paginate', '~> 3.0'
 gem 'will_paginate-bootstrap'
 gem 'fineuploader-rails', '~> 3.3'
+gem 'figaro'
 
 group :development, :test do
 	gem 'sqlite3'
+end
+
+group :development do
+	gem 'letter_opener'
+	gem 'quiet_assets'
 end
 
 group :production do
