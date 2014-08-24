@@ -82,6 +82,15 @@ Pinteresting::Application.configure do
   # Note set to this to your actual host
   config.action_mailer.default_url_options = { :host => 'dev.you3dit.com' }
 
+  config.action_mailer.delivery_method = :smtp,
+  config.action_mailer.smtp_settings = {
+    :address => "email-smtp.us-west-2.amazonaws.com",
+    :user_name =>  ENV['SES_SMTP_USERNAME'], # Your SMTP user here.
+    :password => ENV['SES_SMTP_PASSWORD'], # Your SMTP password here.
+    :authentication => :login,
+    :enable_starttls_auto => true
+  }
+
   # config/environments/production.rb
   config.paperclip_defaults = {
     :storage => :s3,
